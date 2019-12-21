@@ -30,11 +30,12 @@ mat-grid-tile {
 .carouselContainer {
     width: 500px !important;
     justify-self: center;
-    height: 600px;
+    height: 500px;
 }
 
 .slidesContainer {
-    height: 800px;
+    height: 600px;
+    width: 500px;
 }
 
 :host {
