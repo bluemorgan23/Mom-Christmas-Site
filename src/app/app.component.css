@@ -3,11 +3,11 @@ mat-grid-tile {
   }
 
   .example-card {
-    max-width: 400px;
+    max-width: 400px !important;
   }
   
   .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-image: url('../assets/MomPhotos/babyYodaAvatar.jpg');
     background-size: cover;
   }
 
@@ -21,4 +21,23 @@ mat-grid-tile {
 
 .mat-grid-tile {
     width: 400px;
+}
+
+.mat-card {
+    background: #ff4d4d !important;
+}
+
+.carouselContainer {
+    width: 500px !important;
+    justify-self: center;
+    height: 600px;
+}
+
+.slidesContainer {
+    height: 800px;
+}
+
+:host {
+    display: flex;
+    flex-direction: column;
 }
