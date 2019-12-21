@@ -1,0 +1,42 @@
+mat-grid-tile {
+    margin: 50px;
+  }
+
+  .example-card {
+    max-width: 400px !important;
+  }
+  
+  .example-header-image {
+    background-image: url('../../assets/MomPhotos/babyYodaAvatar.jpg');
+    background-size: cover;
+  }
+
+  .mat-grid-tile {
+    width: 400px;
+}
+
+.mat-card {
+    background: #ff4d4d !important;
+}
+
+.carouselContainer {
+    width: 500px !important;
+    justify-self: center;
+    height: 500px;
+}
+
+.slidesContainer {
+    height: 600px;
+    width: 500px;
+}
+
+:host {
+    display: flex;
+    flex-direction: column;
+}
+
+.noteContainer {
+    width: 80%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}

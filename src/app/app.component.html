@@ -98,149 +98,33 @@
     text-indent: 4px;
   }
 
-  svg#clouds {
-    position: fixed;
-    bottom: -160px;
-    left: -230px;
-    z-index: -10;
-    width: 1920px;
+  .background {
+   
+    
   }
 
+  
 
- 
 </style>
 
 <!-- Toolbar -->
-<mat-toolbar color="accent">
-  <span>Merry Christmas, Mom!</span>
+<mat-toolbar  style="height: 80px; display: flex; justify-content: space-between;background: #ff4d4d !important;">
+  <span ><a [routerLink]="['/home']">Merry Christmas, Mom!</a></span>
+  <span><img src="../assets/MomPhotos/SantaSleigh.png"/></span>
+  <span ><a [routerLink]="['/BabyYoda']">Baby Yoda Memes</a></span>
 </mat-toolbar>
 
 <div class="content" role="main">
 
+
+    <router-outlet></router-outlet>
+
+
+
+
   
 
-<div style="width: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column">
-    <mat-card class="noteContainer">
-        <mat-card-header >
-            <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>Christmas Card</mat-card-title>
-            <mat-card-subtitle>Thank you so much, Mom!</mat-card-subtitle>
-          </mat-card-header>
-         <mat-card-content>
-          <h3 style="line-height: 1.7em;
-          text-shadow: 0.5px 0.5px #000000;">
-            Merry Christmas! I wanted to give you something special and unique for Christmas this year, so I decided to give you YOUR VERY OWN CHRISTMAS WEBSITE!!! HOW EXCITING?! I figured this would be one of those thoughtful gifts that you have always really cherished. I want you to know that your dedication to our family does not go unnoticed. I've gone around social media and collected a handful of photos that show some things that I love most about you. First of all, you have always been there to support all of us in of our accomplishments. Whether it was having a birthday party, graduating, winning (or losing) a game, you were always there! Even when I was little, and you were working your tail off as a nurse, you never missed a single beat. I know that wasn't easy and that you probably wanted to give up sometimes, but you didn't. You achieved your goals, and you've made it possible for me to achieve mine. You're also making that possible for Cannon and Campbell.
-          </h3>
-          <br />
-          <h3 style="line-height: 1.7em;
-          text-shadow: 0.5px 0.5px #000000;">
-            You've always done your absolute best to make sure we have what we need and more. I've been thinking about all of the effort you've put in over the years for things like halloween costumes, education, elf on a shelf, extra-curricular activies like girl scouts, and more. You are so imaginative and creative, and I love that about you! I literally told someone that my most favorite halloween costume ever was when I was the Wright Brothers. What an incredible costume! You're still crushing it with the kids' costumes, and you and Stacey's costumes are always incredible. The elf-on-a-shelf series that you have been doing over the years has been INSANELY GOOD! I mean that should be going viral, no joke! You've always made sure that we have exciting and beatifully arranged birthday parties. I will always cherish those birthday memories, such as the pirate treasure hunt, the shark theme, and the dance party at the agricenter. You made this all possible!
-          </h3>
-          <br />
-          <h3 style="line-height: 1.7em;
-          text-shadow: 0.5px 0.5px #000000;">
-            Another thing I like to point out is your tendency to be charitable. You do so many things like being a part of Junior Auxiliary, Girl Scouts, PTA, and more. Its truly astounding how you find time to do all of this, and sometimes it makes me worried that you are doing to much. However, you always seem to find time and hold everything together. I know that is hard, just like it was when you were working on-call as a nurse. You never give up. You never have, and you never will stop fighting for us. You are the best mom I could've ever asked for. I love you very much, and MERRY CHRISTMAS!!
-          </h3>
-         </mat-card-content>
-    </mat-card>
-    <mat-card class="carouselContainer">
-        <mat-card-header >
-            <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>Family Photos</mat-card-title>
-            <mat-card-subtitle>Here are some fun photos!</mat-card-subtitle>
-          </mat-card-header>
-         <div class="slidesContainer">
-            <app-carousel [autoPlayDuration]="5000" animation="slide" [isNavigationVisible]="true" [isThumbnailsVisible]="false" [slides]="slides"
-            [slideTemplateRef]="slide" [thumbnailTemplateRef]="thumbnail"></app-carousel>
-            <ng-template #slide let-slide>
-              <div [ngStyle]="{
-                  'background-size': 'cover',
-                  'background-image': 'url(' + slide.url + ')',
-                  'background-repeat': 'no-repeat',
-                  'width': '100%',
-                  'height': '100%'
-                }">
-              </div>
-            </ng-template>
-            <!-- <ng-template #thumbnail let-slide>
-                <div [ngStyle]="{
-                    'background-size': 'cover',
-                    'background-image': 'url(' + slide.url + ')',
-                    'background-repeat': 'no-repeat',
-                    'background-position': 'center center',
-                    'width': '100%',
-                    'height': '100%'
-                  }"></div> 
-            </ng-template> -->
-         </div>
-      
-    </mat-card>
-</div>
-  
-    <mat-grid-list cols="2" rowHeight="600px" style="width: 90%;">
-        <mat-grid-tile>
-          <mat-card class="example-card">
-            <mat-card-header >
-              <div mat-card-avatar class="example-header-image"></div>
-              <mat-card-title>Dixie Doodle!</mat-card-title>
-              <mat-card-subtitle>Bringing the Christmas Cheer</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image  src="../assets/MomPhotos/DixieChristmasNeck.jpg" alt="Dixie">
-            <mat-card-content>
-              <p>
-                A small, agile dog that copes very well with mountainous terrain, Dixie was originally
-                bred for hunting.
-              </p>
-            </mat-card-content>
-          </mat-card>
-        </mat-grid-tile>
-        <mat-grid-tile>
-          <mat-card class="example-card">
-            <mat-card-header>
-              <div mat-card-avatar class="example-header-image"></div>
-              <mat-card-title>Dixers!!</mat-card-title>
-              <mat-card-subtitle>Sporting a killer beard and her favorite sweater </mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image src="../assets/MomPhotos/DixieChristmas.jpg" alt="Dixie">
-            <mat-card-content>
-              <p>
-                Dixie has brought our family joy for 12 years with many more to come :)
-              </p>
-            </mat-card-content>
-          </mat-card>
-        </mat-grid-tile>
-        <mat-grid-tile>
-          <mat-card class="example-card">
-            <mat-card-header>
-              <div mat-card-avatar class="example-header-image"></div>
-              <mat-card-title>The Elves are back!</mat-card-title>
-              <mat-card-subtitle>Reaching terminal velocity on these sleds!</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image src="../assets/MomPhotos/ElvesSledding.jpg" alt="Elves sledding">
-            <mat-card-content>
-              <p>
-                Elves have many hobbies! They enjoy skiing, sledding, tubing, and even rock climbing!
-              </p>
-            </mat-card-content>
-          </mat-card>
-        </mat-grid-tile>
-        <mat-grid-tile><mat-card class="example-card">
-          <mat-card-header style="height: 70px">
-            <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>The Elusive Climber Elves</mat-card-title>
-            <mat-card-subtitle>Making a dangerous maneuver on the gumdrop mountain wall</mat-card-subtitle>
-          </mat-card-header>
-          <img mat-card-image style="height: 390px" src="../assets/MomPhotos/ElvesClimbing.jpg">
-          <mat-card-content>
-            <p>
-              Many people don't know this... but the elves make an annual pilgrimage to the dangerous Candy Mountain. Candy Mountain is 30 miles west of the North Pole, but the dangerous trip is worth every step! The elves must climb the treacherous gumdrop mountain face in order to reach all of the delicious candies that Santa delivers to all to good boys and girls!
-            </p>
-          </mat-card-content>
-        </mat-card></mat-grid-tile>
-      </mat-grid-list>
-  <svg id="clouds" alt="Gray Clouds Background" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677" viewBox="0 0 2611.084 485.677">
-    <path id="Path_39" data-name="Path 39" d="M2379.709,863.793c10-93-77-171-168-149-52-114-225-105-264,15-75,3-140,59-152,133-30,2.83-66.725,9.829-93.5,26.25-26.771-16.421-63.5-23.42-93.5-26.25-12-74-77-130-152-133-39-120-212-129-264-15-54.084-13.075-106.753,9.173-138.488,48.9-31.734-39.726-84.4-61.974-138.487-48.9-52-114-225-105-264,15a162.027,162.027,0,0,0-103.147,43.044c-30.633-45.365-87.1-72.091-145.206-58.044-52-114-225-105-264,15-75,3-140,59-152,133-53,5-127,23-130,83-2,42,35,72,70,86,49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33,61.112,8.015,113.854-5.72,150.492-29.764a165.62,165.62,0,0,0,110.861-3.236c47,94,178,113,251,33,31.385,4.116,60.563,2.495,86.487-3.311,25.924,5.806,55.1,7.427,86.488,3.311,73,80,204,61,251-33a165.625,165.625,0,0,0,120,0c51,13,108,15,157-5a147.188,147.188,0,0,0,33.5-18.694,147.217,147.217,0,0,0,33.5,18.694c49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33C2446.709,1093.793,2554.709,922.793,2379.709,863.793Z" transform="translate(142.69 -634.312)" fill="#eee"/>
-  </svg>
+  <svg class="background" xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'><rect fill='#ddffaa' width='120' height='120'/><polygon fill='#AE9' points='120 120 60 120 90 90 120 60 120 0 120 0 60 60 0 0 0 60 30 90 60 120 120 120 '/></svg>
 
 </div>
 
@@ -254,4 +138,4 @@
 
 
 
-<router-outlet></router-outlet>
+
