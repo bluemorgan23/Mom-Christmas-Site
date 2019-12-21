@@ -42,3 +42,8 @@ mat-grid-tile {
     display: flex;
     flex-direction: column;
 }
+
+.noteContainer {
+    width: 80%;
+    margin-bottom: 20px;
+}
